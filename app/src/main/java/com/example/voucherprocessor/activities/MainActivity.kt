@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
                 sendNewBalancesToBeWritten(mockVoucherCard)
             }
         }
+        reset_button.setOnClickListener {
+            mockVoucherCard.firstBalance = 10.0
+            mockVoucherCard.secondBalance = 20.0
+            Toast.makeText(this, "The balances of the voucher card have been reset!",Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun sendNewBalancesToBeWritten(newCardData: VoucherCard) {
